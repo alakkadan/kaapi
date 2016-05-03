@@ -1,4 +1,4 @@
-package com.kaapi;
+package com.lightside;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,4 +1,4 @@
-package com.kaapi.controllers;
+package com.lightside.controllers;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

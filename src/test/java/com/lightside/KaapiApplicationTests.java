@@ -1,4 +1,4 @@
-package com.kaapi;
+package com.lightside;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
