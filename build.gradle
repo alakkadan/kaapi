@@ -1,0 +1,40 @@
+group = 'com.kaapi'
+version = '0.0.1-SNAPSHOT'
+
+description = """kaapi"""
+
+buildscript {
+	ext { springBootVersion = '1.3.3.RELEASE' }
+	repositories { mavenCentral() }
+	dependencies { classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}") }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'spring-boot'
+
+jar {
+		baseName = 'kaapi'
+		version = '0.0.1-SNAPSHOT'
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+
+repositories { mavenCentral() }
+
+
+dependencies {
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-actuator', version:'1.3.3.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-actuator-docs', version:'1.3.3.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-security', version:'1.3.3.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version:'1.3.3.RELEASE'
+    testCompile(group: 'org.springframework.boot', name: 'spring-boot-starter-test', version:'1.3.3.RELEASE') 
+	{
+		exclude(module: 'commons-logging')
+    }
+}
+
+task wrapper(type: Wrapper) { gradleVersion = '2.12' }
